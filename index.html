@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sebastian Vernis - Soluciones Web y Marketing Digital</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Enlace a la hoja de estilos CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header de Navegación -->
+  <header>
+    <nav>
+      <a href="#inicio" class="activo">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#tienda">Tienda</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Sección de Inicio -->
+  <main id="inicio">
+    <section class="hero">
+      <h1>Transformo tu Presencia Digital</h1>
+      <p>Soluciones Web y Marketing para Crecer.</p>
+      <button onclick="handleLinkClick(event, 'servicios')">Ver Mis Servicios</button>
+    </section>
+
+    <section class="diferenciadores">
+      <h2>¿Por qué trabajar conmigo?</h2>
+      <div id="diferenciadores-content">
+        <ul>
+          <li>Atención personalizada y cercana</li>
+          <li>Soluciones a la medida de tu negocio</li>
+          <li>Resultados medibles y enfoque en conversión</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sobre-nosotros-inicio">
+      <h2>Sobre Mí</h2>
+      <div class="sobre-nosotros-contenido">
+        <p>Soy un profesional apasionado por la tecnología y el marketing digital, dedicado a transformar ideas en realidades digitales impactantes. Creo en el poder de una presencia online sólida para impulsar el crecimiento de cualquier negocio.</p>
+        <p>Mi misión es ofrecer soluciones web y de marketing innovadoras, personalizadas y orientadas a resultados, construyendo una relación de confianza y colaboración con cada uno de mis clientes.</p>
+      </div>
+    </section>
+
+    <section class="nuestro-proceso-inicio">
+      <h2>Nuestro Proceso Simplificado</h2>
+      <div class="proceso-pasos-container">
+        <div class="proceso-paso">
+          <div class="paso-icono">💬</div>
+          <h3>1. Descubrimiento</h3>
+          <p>Escuchamos tus ideas, analizamos tus necesidades y definimos juntos los objetivos del proyecto.</p>
+        </div>
+        <div class="proceso-paso">
+          <div class="paso-icono">🎨</div>
+          <h3>2. Diseño y Estrategia</h3>
+          <p>Creamos un plan detallado y un diseño visual atractivo y funcional centrado en el usuario.</p>
+        </div>
+        <div class="proceso-paso">
+          <div class="paso-icono">💻</div>
+          <h3>3. Desarrollo</h3>
+          <p>Construimos tu solución digital utilizando las tecnologías más adecuadas y eficientes.</p>
+        </div>
+        <div class="proceso-paso">
+          <div class="paso-icono">🚀</div>
+          <h3>4. Lanzamiento y Optimización</h3>
+          <p>Implementamos, probamos exhaustivamente y lanzamos tu proyecto. Luego, optimizamos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-secundaria"> 
+      <h2>¿Listo para crecer?</h2>
+      <button onclick="handleLinkClick(event, 'contacto')">Solicita una asesoría gratuita</button>
+    </section>
+  </main>
+
+  <!-- Sección de Servicios -->
+  <section id="servicios">
+    <h1>Servicios Digitales</h1>
+    <div id="servicios-content-wrapper"> 
+      <div id="servicios-lista"></div> 
+    </div>
+  </section>
+
+  <!-- Sección de Catálogo -->
+  <section id="catalogo">
+    <h1>Catálogo de Sitios Web de Muestra</h1>
+    <div id="catalogo-content-wrapper"> 
+      <button type="button" id="toggle-filtros-btn">Mostrar Filtros</button>
+      <div id="filtros-contenedor">
+        <form id="filtros-catalogo">
+          <fieldset class="filter-group">
+            <legend>Filtrar por Rubro:</legend>
+            <div class="filter-tags" id="rubro-tags">
+              <!-- Las etiquetas de filtro se generarán aquí con JS -->
+            </div>
+          </fieldset>
+          <fieldset class="filter-group">
+            <legend>Filtrar por Características:</legend>
+            <div class="filter-tags" id="carac-tags">
+              <!-- Las etiquetas de filtro se generarán aquí con JS -->
+            </div>
+          </fieldset>
+          <button type="button" id="limpiar-filtros">Limpiar Filtros</button>
+        </form>
+      </div>
+      <div class="catalogo-lista" id="catalogo-lista"></div> 
+    </div>
+  </section>
+
+  <!-- Sección de Tienda -->
+  <section id="tienda">
+    <h1>Tienda de Servicios Digitales</h1>
+    <div id="tienda-content-wrapper"> 
+      <p class="tienda-introduccion">Adquiere mis servicios empaquetados o solicita una cotización personalizada para llevar tu proyecto al siguiente nivel.</p>
+      <div class="tienda-productos-lista" id="tienda-productos-lista">
+        </div>
+    </div>
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section id="contacto">
+    <h1>Contáctame</h1>
+    <form id="profilingForm" novalidate>
+      <div class="form-group">
+        <label for="contactNombre">Nombre Completo:</label>
+        <input type="text" id="contactNombre" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="contactEmail">Correo Electrónico:</label>
+        <input type="email" id="contactEmail" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="contactEmpresa">Nombre de la Empresa (Opcional):</label>
+        <input type="text" id="contactEmpresa" name="empresa">
+      </div>
+      <div class="form-group">
+        <label for="contactSitioWeb">Sitio Web Actual (Opcional):</label>
+        <input type="url" id="contactSitioWeb" name="sitioWeb" placeholder="https://www.ejemplo.com">
+      </div>
+      <div class="form-group">
+        <label for="contactServicioInteres">¿En qué servicio estás interesado/a?</label>
+        <select id="contactServicioInteres" name="servicioInteres" required>
+          <option value="" disabled selected>-- Elige una opción --</option>
+          <option value="diseno_desarrollo_web">Diseño y Desarrollo Web</option>
+          <option value="ecommerce_pagos">E-commerce y Pagos</option>
+          <option value="marketing_digital">Marketing Digital</option>
+          <option value="servicios_tecnicos_consultoria">Servicios Técnicos y Consultoría</option>
+          <option value="otro">Otro (por favor, especifica en el mensaje)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="contactMensaje">Tu Mensaje:</label>
+        <textarea id="contactMensaje" name="mensaje" rows="5" placeholder="Cuéntame más sobre tu proyecto o consulta..." required></textarea>
+      </div>
+      <div class="form-group terms-group">
+        <input type="checkbox" id="contactTerminos" name="terminos" value="aceptados" required>
+        <label for="contactTerminos">
+          He leído y acepto los <a href="#terminos" target="_blank">Términos de Servicio</a> y la <a href="#privacidad" target="_blank">Política de Privacidad</a>.
+        </label>
+      </div>
+      <button type="submit">Enviar Mensaje</button>
+      <div id="form-status-message"></div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Sebastian Vernis | contacto@sebastianvernis.com</p>
+  </footer>
+
+  <!-- Enlace al script de JavaScript -->
+  <script src="script.js" defer></script>
+</body>
+</html>
